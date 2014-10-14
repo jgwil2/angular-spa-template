@@ -1,34 +1,10 @@
-Contacts-app
-============
+Angular single-page app template
+================================
 
 Project Overview
 ----------------
+This is a basic AngularJS single-page app with a Python Flask API and MongoDB that allows for registration, login, and logout.
 
-Simple web application for gathering and editing a user's contacts.
-
-Requirements
-------------
-
-- User account
-- Create contact
-- Delete contact
-- Edit contacts
-- Contact fields should include
-  - first name
-  - last name
-  - company name
-  - phone
-  - address
-  - birthday
-  - additional notes
-- Search contact list
-- Contact grouping/sorting via tagging/labels
-
-Phase 2 Features
-----------------
-
-- Port project over to OSX, iOS, and Android as a native app
-- Sync contacts
 
 To run
 ------
@@ -44,23 +20,3 @@ To run
 - Run app on port 5000:
     `python app.py`
 
-Proposed Schema
----------------
-
-    {
-    	"name": "",
-    	"password": "",
-    	"contacts":
-    		[
-    			{
-    				"lastName": "",
-    				"firstName": "",
-    				"company": "",
-    				"phone": "",
-    				"address": "",
-    				"birthday": "",
-    				"notes": "",
-    				"tags" : []
-    			}
-    		]
-    }
