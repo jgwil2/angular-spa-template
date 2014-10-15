@@ -1,8 +1,8 @@
 'use strict';
 
-var contactsControllers = angular.module('contactsControllers', []);
+var appControllers = angular.module('appControllers', []);
 
-contactsControllers.controller('LoginCtrl', ['$scope', 'AuthService', '$location',
+appControllers.controller('LoginCtrl', ['$scope', 'AuthService', '$location',
 	function($scope, AuthService, $location){
 
 		// initialize credentials object
@@ -18,7 +18,7 @@ contactsControllers.controller('LoginCtrl', ['$scope', 'AuthService', '$location
 	}
 ]);
 
-contactsControllers.controller('RegisterCtrl', ['$scope', 'RegisterService', '$location',
+appControllers.controller('RegisterCtrl', ['$scope', 'RegisterService', '$location',
 	function($scope, RegisterService, $location){
 
 		// initialize credentials object
@@ -32,7 +32,7 @@ contactsControllers.controller('RegisterCtrl', ['$scope', 'RegisterService', '$l
 	}
 ]);
 
-contactsControllers.controller('HomeCtrl', ['$scope', 'AuthService', '$location',
+appControllers.controller('HomeCtrl', ['$scope', 'AuthService', '$location',
 	function($scope, AuthService, $location){
 
 		// get current user from localStorage
