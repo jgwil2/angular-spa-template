@@ -1,9 +1,9 @@
 'use strict';
 
-var contactsServices = angular.module('contactsServices', []);
+var appServices = angular.module('appServices', []);
 
 // AuthService handles login/logout by calling SessionService
-contactsServices.factory('AuthService', ['SessionService', '$http',
+appServices.factory('AuthService', ['SessionService', '$http',
 	function(SessionService, $http){
 
 		// private methods; set and unset sessions
@@ -39,7 +39,7 @@ contactsServices.factory('AuthService', ['SessionService', '$http',
 	}
 ]);
 
-contactsServices.factory('RegisterService', ['$http',
+appServices.factory('RegisterService', ['$http',
 	function($http){
 		return {
 			registerUser: function(credentials){
@@ -51,7 +51,7 @@ contactsServices.factory('RegisterService', ['$http',
 ]);
 
 // SessionService stores sessions in localStorage
-contactsServices.factory('SessionService', [
+appServices.factory('SessionService', [
 	function(){
 		return {
 			get: function(key){
