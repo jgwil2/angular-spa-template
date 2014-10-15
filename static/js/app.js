@@ -1,10 +1,10 @@
 'use strict';
 
 // define app dependencies
-var contactsApp = angular.module('contactsApp', [
-	'contactsControllers',
+var app = angular.module('contactsApp', [
+	'appControllers',
 	'ui.router',
-	'contactsServices'
+	'appServices'
 ]);
 
 // partial templates path relative to app.py
@@ -38,7 +38,7 @@ contactsApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
 
 // appwide concerns can be places on $rootScope where
 // they will be accessible to all child scopes
-contactsApp.run(['$rootScope', 'AuthService', '$location',
+app.run(['$rootScope', 'AuthService', '$location',
 	function($rootScope, AuthService, $location){
 
 		// UNPROTECTED_ROUTES is array of all routes not requiring authentication
